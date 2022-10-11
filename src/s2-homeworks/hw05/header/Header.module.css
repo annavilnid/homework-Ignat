@@ -3,7 +3,11 @@
 }
 
 .header {
+    display: flex;
+    flex-direction: row;
+    background: #FFFFFF;
 }
 
 .header h1 {
+
 }
