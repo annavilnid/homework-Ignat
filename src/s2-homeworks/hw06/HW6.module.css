@@ -1,5 +1,17 @@
 .buttonsContainer {
+    display: flex;
+    flex-direction: row;
 }
 
 .editableSpanContainer {
+}
+
+.button {
+    margin-right: 15px;
+    width: 116px;
+    min-height: 30px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
 }
