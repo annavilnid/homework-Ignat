@@ -2,7 +2,6 @@
     position: relative;
     min-width: 317px;
     height: 100%;
-    visibility: hidden;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -19,7 +18,6 @@
 
 .sidebar.open {
     left: 0px;
-    visibility: visible;
 }
 
 .background {
