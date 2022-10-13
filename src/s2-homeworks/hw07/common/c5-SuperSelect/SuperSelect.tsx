@@ -36,19 +36,31 @@ const SuperSelect: React.FC<SuperSelectPropsType> = ({
         : [] // map options with key
 
     const onChangeCallback = (e: ChangeEvent<HTMLSelectElement>) => {
-        // делают студенты
+        onChangeOption && onChangeOption(+e.currentTarget.value)// делают студенты
     }
 
     const finalSelectClassName = s.select + (className ? ' ' + className : '')
 
     return (
+        <div className={s.wrapper}>
         <select
             className={finalSelectClassName}
             onChange={onChangeCallback}
             {...restProps}
         >
+            {/*<div className={s.content}>*/}
+            <option
+                id={'hw7-option-' + 'def'}
+                className={s.def}
+                key={'def'}
+                value={-1}
+            >
+                {'Selected'}
+            </option>
             {mappedOptions}
+            {/*</div>*/}
         </select>
+        </div>
     )
 }
 

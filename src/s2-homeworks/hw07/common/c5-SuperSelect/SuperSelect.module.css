@@ -1,9 +1,36 @@
 .select {
+    width: 165px;
+    min-height: 24px;
+    background: #FFFFFF;
+    border: 1px solid #C2C2C2;
+    border-radius: 2px;
 }
 
 .select:focus {
-}
 
+}
 
 .option:hover {
+    border: 1px solid green;
 }
+
+.def {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    /*color: #A9A9A9;*/
+    color: #00cc22;
+    background: #002e5c;
+}
+
+.content {
+
+}
+
+.option {
+
+}
+
+
+
