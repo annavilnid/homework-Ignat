@@ -1,23 +1,82 @@
 .item {
+    width: 297px;
+     border: 1px solid #E5E5E5;
 }
 
 .item:last-of-type {
+    border-bottom: none;
 }
 
 .users {
+    width: 606px;
+    margin-top: 18px;
+    border-collapse: collapse;
 }
 
 .buttonsContainer {
+    margin-left: 237px;
+    width: 342px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 606px;
 }
 
 .thead {
+    background: #E5E5E5;
+    overflow: hidden;
+    white-space: nowrap;
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
 }
 
 .nameCol {
+    padding-left: 17px;
+    min-height: 47px;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    max-width: 297px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
 }
 
 .ageCol {
+    width: 309px;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
 }
+
+.title {
+    padding: 9px 0;
+    min-height: 36px;
+    font-family: 'Roboto',sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    color: #000000;
+}
+
+.title:first-of-type {
+    padding-left: 18px;
+}
+

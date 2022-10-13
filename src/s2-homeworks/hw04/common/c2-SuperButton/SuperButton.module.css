@@ -1,8 +1,7 @@
 .button {
     margin: 0;
-    padding: 0;
-    width: 84px;
-    height: 30px;
+    padding: 0 24px;
+    min-height: 30px;
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 600;
@@ -24,7 +23,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 128px;
     color: #0066CC;
     background: white;
     border: 1px solid #0066CC;
