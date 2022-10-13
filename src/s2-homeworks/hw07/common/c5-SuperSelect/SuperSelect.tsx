@@ -48,17 +48,15 @@ const SuperSelect: React.FC<SuperSelectPropsType> = ({
             onChange={onChangeCallback}
             {...restProps}
         >
-            {/*<div className={s.content}>*/}
-            <option
-                id={'hw7-option-' + 'def'}
-                className={s.def}
-                key={'def'}
-                value={-1}
-            >
-                {'Selected'}
-            </option>
+            {/*<option*/}
+            {/*    id={'hw7-option-' + 'def'}*/}
+            {/*    className={s.def}*/}
+            {/*    key={'def'}*/}
+            {/*    value={-1}*/}
+            {/*>*/}
+            {/*    {'Selected'}*/}
+            {/*</option>*/}
             {mappedOptions}
-            {/*</div>*/}
         </select>
         </div>
     )
