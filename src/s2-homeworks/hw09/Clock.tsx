@@ -36,7 +36,7 @@ function Clock() {
         minute: "2-digit",
         second: "2-digit",
     }).format(date) || <br/> // часы24:минуты:секунды (01:02:03)/(23:02:03)/(24:00:00)/(00:00:01) // пишут студенты
-    const stringDate = new Intl.DateTimeFormat("en-US", {
+    const stringDate = new Intl.DateTimeFormat("en-GB", {
         day: "2-digit",
         month: "2-digit",
         year: "numeric",
