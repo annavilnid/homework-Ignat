@@ -1,6 +1,6 @@
 .item {
     width: 297px;
-     border: 1px solid #E5E5E5;
+     border-bottom: 1px solid #E5E5E5;
 }
 
 .item:last-of-type {
