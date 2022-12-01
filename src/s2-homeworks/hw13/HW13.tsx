@@ -36,7 +36,7 @@ const HW13 = () => {
             .then((res) => {
                 setCode('Код 200!')
                 // setText('...всё ок) код 200 - обычно означает что скорее всего всё ок)')
-                setText('...всё ок)')
+                setText('...всё)')
                 setImage(success200)
                 // дописать
                 console.log('успешно')
