@@ -20,52 +20,49 @@ const HW13 = () => {
     const [info, setInfo] = useState('')
     const [image, setImage] = useState('')
 
+    // const [isDisabled, setIsDisabled] = useState(false)
+
     const send = (x?: boolean | null) => () => {
         const url =
             x === null
                 ? 'https://xxxxxx.ccc' // имитация запроса на не корректный адрес
-                : 'https://incubator-personal-page-back.herokuapp.com/api/3.0/homework/test'
+                : 'https://samurai.it-incubator.io/api/3.0/homework/test'
+    // : 'https://samurai.it-incubator.io/api/3.0/homework/test'
 
         setCode('')
         setImage('')
         setText('')
         setInfo('...loading')
-
+        // setIsDisabled(true)
         axios
             .post(url, {success: x})
             .then((res) => {
-                setCode('Код 200!')
-                // setText('...всё ок) код 200 - обычно означает что скорее всего всё ок)')
-                setText('...всё ок)')
-                setInfo('код 200 - обычно означает что скорее всего всё ок')
+                console.log(res)
+                setCode(`Код ${res.status}!`)
+                setText(res.data.errorText)
+                setInfo(res.data.info)
                 setImage(success200)
                 // дописать
-                console.log('успешно')
             })
             .catch((e) => {
                     if (e.response.status === 400) {
-                        setCode('Код 400!')
-                        //setText('Ты не отправил success в body вообще! ошибка 400 - обычно означает что скорее всего фронт отправил что-то не то на бэк!')
-                        setText('Ты не отправил success в body вообще!')
-                        setInfo('ошибка 400 - обычно означает что скорее всего фронт отправил что-то не то на бэк!')
+                        setCode(`Ошибка ${e.response.status}!`)
+                        setText(e.response.data.errorText)
+                        setInfo(e.response.data.info)
                         setImage(error400)
                     }else if (e.response.status === 500) {
-                        setCode('Код 500!')
-                        //setText('эмитация ошибки на сервере ошибка 500 - обычно означает что что-то сломалось на сервере, например база данных)')
-                        setText('эмитация ошибки на сервере')
-                        setInfo('ошибка 500 - обычно означает что что-то сломалось на сервере, например база данных)')
+                        setCode(`Ошибка ${e.response.status}!`)
+                        setText(e.response.data.errorText)
+                        setInfo(e.response.data.info)
                         setImage(error500)
                     } else {
-                        setCode('Error!')
-                        // setText('Network Error AxiosError')
                         setText('Network Error')
                         setInfo('AxiosError')
                         setImage(errorUnknown)
                     }
-                // дописать
             })
-            // .then (() => {
-            //     setInfo('')
+            // .finally(() => {
+            //     setIsDisabled(false)
             // })
     }
 
@@ -89,6 +86,7 @@ const HW13 = () => {
                         onClick={send(false)}
                         xType={'secondary'}
                         disabled={info==='...loading'}
+                        // disabled={isDisabled}
                         // дописать
                     >
                         Send false
@@ -97,6 +95,7 @@ const HW13 = () => {
                         id={'hw13-send-undefined'}
                         onClick={send(undefined)}
                         xType={'secondary'}
+                        // disabled={isDisabled}
                         disabled={info==='...loading'}
                         // дописать
                     >
@@ -106,6 +105,7 @@ const HW13 = () => {
                         id={'hw13-send-null'}
                         onClick={send(null)} // имитация запроса на не корректный адрес
                         xType={'secondary'}
+                        // disabled={isDisabled}
                         disabled={info==='...loading'}
                         // дописать
                     >
